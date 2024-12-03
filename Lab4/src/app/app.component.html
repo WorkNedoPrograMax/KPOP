@@ -1,0 +1,7 @@
+<h1>Середнє арифметичне і геометричне</h1>
+<p>Введіть масив чисел через кому:</p>
+<input [(ngModel)]="inputString" placeholder="Наприклад: 1, -2, 3, 4">
+<button (click)="processInput()">Обробити</button>
+
+<!-- Дочірній компонент для обчислення середніх значень -->
+<child-comp [numbers]="numbers"></child-comp>

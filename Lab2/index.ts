@@ -23,7 +23,7 @@ function getAllWorkers() : MyWorker[] {
 }
 
 // Функція для виведення першого доступного робітника та кількості робітників
-function logFirstAvailable(workers = getAllWorkers()): void {
+function logFirstAvailable(workers : MyWorker[] = getAllWorkers()): void {
     console.log(`Number of workers: ${workers.length}`);
 
     const firstAvailable = workers.find(worker => worker.available);
@@ -151,10 +151,12 @@ class Encyclopedia extends ReferenceItem {
         this.edition = edition; // Ініціалізація edition
     }
 
+
     printItem(): void {
         super.printItem(); // Виклик методу printItem() з батьківського класу
         console.log(`Edition: ${this.edition} (${this.year})`); // Виведення edition та year
     }
+
 
     printCitation(): void { // Реалізація абстрактного методу
         console.log(`${this.title} - ${this.year}`);
